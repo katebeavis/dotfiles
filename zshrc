@@ -83,8 +83,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
- alias rdm="bundle exec rake db:migrate"
- alias rddcm="bundle exec rake db:drop db:create db:migrate"
+ alias migrate="bundle exec rake db:migrate"
+ alias reset="bundle exec rake db:drop db:create db:migrate"
  alias rs="rails s"
  alias rr="bundle exec rake routes"
  alias be="bundle exec"
