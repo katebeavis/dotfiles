@@ -84,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
  alias migrate="bundle exec rake db:migrate"
- alias reset="bundle exec rake db:drop db:create db:migrate"
+ alias dcm="bundle exec rake db:drop db:create db:migrate"
  alias rs="rails s"
  alias rr="bundle exec rake routes"
  alias be="bundle exec"
