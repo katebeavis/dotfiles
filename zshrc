@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/katebeavis/.oh-my-zsh
+export ZSH=/Users/kate.beavis/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME=kate-new
+ZSH_THEME=bullet-train-new
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,12 +49,12 @@ ZSH_THEME=kate-new
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git brew osx caniuse github hub)
 
 # User configuration
 
-export PATH=“$PATH:/Users/katebeavis/.rvm/gems/ruby-2.2.1/bin:/Users/katebeavis/.rvm/gems/ruby-2.2.1@global/bin:/Users/katebeavis/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/katebeavis/.rvm/bin"
-# export MANPATH="/usr/local/man:$MANPATH”
+export PATH="$PATH:/Users/kate.beavis/.rvm/gems/ruby-2.2.1/bin:/Users/kate.beavis/.rvm/gems/ruby-2.2.1@global/bin:/Users/kate.beavis/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/kate.beavis/.rvm/bin"
+# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,10 +83,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-. `brew --prefix`/etc/profile.d/z.sh
+ alias rdm="bundle exec rake db:migrate"
+ alias rddcm="bundle exec rake db:drop db:create db:migrate"
+ alias rs="rails s"
+ alias rr="bundle exec rake routes"
+ alias be="bundle exec"
+ alias start="./bin/srv restart"
 
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
-export PATH="/usr/local/bin:$PATH"
+ 
 
 #! /bin/zsh
 # A script to make using 256 colors in zsh less painful.
@@ -125,3 +129,20 @@ function spectrum_bls() {
     print -P -- "$code: %{$BG[$code]%}$ZSH_SPECTRUM_TEXT%{$reset_color%}"
   done
 }
+
+# Override BulletTrain theme settings
+BULLETTRAIN_EXIT_SHOW=true
+BULLETTRAIN_PROMPT_CHAR=”❯”
+BULLETTRAIN_TIME_BG=129
+BULLETTRAIN_DIR_BG=027
+BULLETTRAIN_TIME_FG=white
+BULLETTRAIN_GIT_UNTRACKED=“%F{magenta}✭%F{black}”
+BULLETTRAIN_CUSTOM_MSG=katebeavis
+BULLETTRAIN_CUSTOM_BG=033
+BULLETTRAIN_PROMPT_CHAR=→
+
+. `brew --prefix`/etc/profile.d/z.sh
+
+export BUNDLER_EDITOR=“vim”
+
+source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
