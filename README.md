@@ -10,6 +10,8 @@ https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-ma
 
 ``git config --global user.email "email@example.com"``
 
+Cr
+
 ### To install zsh, oh-my-zsh, z & zsh-syntax-highlighting
 
 http://jilles.me/badassify-your-terminal-and-shell/
