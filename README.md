@@ -10,7 +10,11 @@ https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-ma
 
 ``git config --global user.email "email@example.com"``
 
-Cr
+Create a personal token (Github profile > Developer Settings > Personal Access Tokens & select repo) & use it in place of password when pushing.
+
+### To associate your comupter with your Enterprise Github account
+
+https://help.github.com/enterprise/2.11/user/articles/connecting-to-github-with-ssh/
 
 ### To install zsh, oh-my-zsh, z & zsh-syntax-highlighting
 
@@ -32,7 +36,7 @@ Now you can open the current project in Sublime from the terminal using ``subl .
 
 ### To install Node & npm
 
-``brew install node`` (This installs both)
+``brew install node`` (This installs both).
 
 ### Sublime Packages
 
