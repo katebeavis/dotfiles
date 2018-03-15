@@ -1,6 +1,6 @@
 # dotfiles
 
-For when I lose my computer. Inevitably.
+For when I ~~lose my computer~~ have my computer stolen. Inevitably.
 
 ### To install Xcode, Homebrew, Git, RVM, Ruby & Rails
 
