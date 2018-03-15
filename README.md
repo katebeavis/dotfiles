@@ -40,6 +40,6 @@ Now you can open the current project in Sublime from the terminal using ``subl .
 
 ### Sublime Packages
 
-SidebarEnhancements
-RuboCop
-Babel
+* SidebarEnhancements
+* RuboCop
+* Babel
