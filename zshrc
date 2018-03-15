@@ -5,7 +5,7 @@ export ZSH=/Users/kate.beavis/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME=bullet-train-new
+ZSH_THEME=bullet-train
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -133,10 +133,11 @@ function spectrum_bls() {
 # Override BulletTrain theme settings
 BULLETTRAIN_EXIT_SHOW=true
 BULLETTRAIN_PROMPT_CHAR=”❯”
-BULLETTRAIN_TIME_BG=129
+BULLETTRAIN_TIME_BG=128
 BULLETTRAIN_DIR_BG=027
 BULLETTRAIN_TIME_FG=white
 BULLETTRAIN_GIT_UNTRACKED=“%F{magenta}✭%F{black}”
+BULLETTRAIN_CONTEXT_BG=128
 BULLETTRAIN_CUSTOM_MSG=katebeavis
 BULLETTRAIN_CUSTOM_BG=033
 BULLETTRAIN_PROMPT_CHAR=→
@@ -145,4 +146,4 @@ BULLETTRAIN_PROMPT_CHAR=→
 
 export BUNDLER_EDITOR=“vim”
 
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
