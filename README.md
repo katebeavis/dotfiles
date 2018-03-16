@@ -10,7 +10,7 @@ https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-ma
 
 https://www.moncefbelyamani.com/how-to-install-postgresql-on-a-mac-with-homebrew-and-lunchy/
 
-(Don't forget to follow the Terminal instructions)
+(Don't forget to follow the Terminal instructions).
 
 ### To create a new db
 
@@ -18,13 +18,15 @@ https://www.moncefbelyamani.com/how-to-install-postgresql-on-a-mac-with-homebrew
 
 ``CREATE_DATABASE database_name;``
 
-``\list`` to see all db
+``\list`` to see all databases.
 
 ``\q``
 
 ### To associate your computer with your Github account
 
 ``git config --global user.email "email@example.com"``
+
+``git config --global credential.helper osxkeychain``
 
 **If you have 2-factor-authentication enabled:**
 
@@ -33,6 +35,10 @@ Create a personal token (Github profile > Developer Settings > Personal Access T
 ### To associate your computer with your Enterprise Github account
 
 https://help.github.com/enterprise/2.11/user/articles/connecting-to-github-with-ssh/
+
+Add Identity using Keychain
+
+``ssh-add -K ~/.ssh/id_rsa``
 
 ### To install zsh, oh-my-zsh, z & zsh-syntax-highlighting
 
