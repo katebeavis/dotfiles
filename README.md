@@ -6,6 +6,22 @@ For when I ~~lose my computer~~ have my computer stolen. Inevitably.
 
 https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac
 
+### To install Postgresql
+
+https://www.moncefbelyamani.com/how-to-install-postgresql-on-a-mac-with-homebrew-and-lunchy/
+
+(Don't forget to follow the Terminal instructions)
+
+### To create a new db
+
+``psql``
+
+``CREATE_DATABASE database_name;``
+
+``\list`` to see all db
+
+``\q``
+
 ### To associate your computer with your Github account
 
 ``git config --global user.email "email@example.com"``
