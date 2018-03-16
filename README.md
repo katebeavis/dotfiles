@@ -26,7 +26,7 @@ http://jilles.me/badassify-your-terminal-and-shell/
 
 https://github.com/caiogondim/bullet-train.zsh
 
-Don't forget to install Powerline fonts from [here](https://github.com/powerline/fonts)
+Don't forget to install Powerline fonts from [here](https://github.com/powerline/fonts).
 
 My latest set-up is **Pro** (don't forget to set as default & change background opacity), with Inconsolata-dz for Powerline 16pt (with Antialias text).
 
@@ -45,3 +45,11 @@ Now you can open the current project in Sublime from the terminal using ``subl .
 * SidebarEnhancements
 * RuboCop
 * Babel
+
+### To find Home folder & save it to favourites
+
+Go > Home. Cmd ^ to go up one folder & drag & drop into favourites sidebar
+
+### To save screenshots in a folder
+
+``defaults write com.apple.screencapture location drag_and_drop_folder_here``
