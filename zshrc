@@ -88,7 +88,9 @@ source $ZSH/oh-my-zsh.sh
  alias rs="rails s"
  alias rr="bundle exec rake routes"
  alias be="bundle exec"
- alias start="./bin/srv restart"
+ alias start="bundle exec rackup -o secure2.dev.zopa.local -p 8080"
+ alias gfu="git fetch upstream master"
+ alias gcmsg="git commit -m"
 
  
 
@@ -112,7 +114,6 @@ for color in {000..255}; do
     FG[$color]="%{[38;5;${color}m%}"
     BG[$color]="%{[48;5;${color}m%}"
 done
-
 
 ZSH_SPECTRUM_TEXT=${ZSH_SPECTRUM_TEXT:-Arma virumque cano Troiae qui primus ab oris}
 
@@ -145,5 +146,12 @@ BULLETTRAIN_PROMPT_CHAR=→
 . `brew --prefix`/etc/profile.d/z.sh
 
 export BUNDLER_EDITOR=“vim”
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
