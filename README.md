@@ -66,7 +66,11 @@ Now you can open the current project in Sublime from the terminal using ``subl .
 
 * SidebarEnhancements
 * RuboCop
-* Babel
+* 10% Too Dull for My Tastes Color Scheme
+* A File Icon
+* Material Theme
+* BracketHighlighter
+* rspec-snippets
 
 ### To find Home folder & save it to favourites
 
