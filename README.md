@@ -6,6 +6,8 @@ For when I ~~lose my computer~~ have my computer stolen. Inevitably.
 
 https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac
 
+zlib errors were fixed here https://github.com/rvm/rvm/issues/4206#issuecomment-456790782
+
 ### To install Postgresql
 
 https://www.moncefbelyamani.com/how-to-install-postgresql-on-a-mac-with-homebrew-and-lunchy/
