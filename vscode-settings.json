@@ -1,0 +1,21 @@
+{
+  "files.autoSave": "onFocusChange",
+  "breadcrumbs.enabled": true,
+  "editor.renderWhitespace": "all",
+  "editor.fontSize": 12,
+  "editor.tabSize": 2,
+  "editor.formatOnPaste": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "prettier.jsxSingleQuote": true,
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}

@@ -16,19 +16,19 @@ https://www.moncefbelyamani.com/how-to-install-postgresql-on-a-mac-with-homebrew
 
 ### To create a new db
 
-``psql``
+`psql`
 
-``CREATE_DATABASE database_name;``
+`CREATE_DATABASE database_name;`
 
-``\list`` to see all databases.
+`\list` to see all databases.
 
-``\q``
+`\q`
 
 ### To associate your computer with your Github account
 
-``git config --global user.email "email@example.com"``
+`git config --global user.email "email@example.com"`
 
-``git config --global credential.helper osxkeychain``
+`git config --global credential.helper osxkeychain`
 
 **If you have 2-factor-authentication enabled:**
 
@@ -40,7 +40,7 @@ https://help.github.com/enterprise/2.11/user/articles/connecting-to-github-with-
 
 Add Identity using Keychain
 
-``ssh-add -K ~/.ssh/id_rsa``
+`ssh-add -K ~/.ssh/id_rsa`
 
 ### To install zsh, oh-my-zsh, z & zsh-syntax-highlighting
 
@@ -56,23 +56,50 @@ My latest set-up is **Pro** (don't forget to set as default & change background 
 
 ### To create a symlink for Sublime
 
-``ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl``
+`ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl`
 
-Now you can open the current project in Sublime from the terminal using ``subl .`` :tada:
+Now you can open the current project in Sublime from the terminal using `subl .` :tada:
 
 ### To install Node & npm
 
-``brew install node`` (This installs both).
+`brew install node` (This installs both).
 
 ### Sublime Packages
 
-* SidebarEnhancements
-* RuboCop
-* 10% Too Dull for My Tastes Color Scheme
-* A File Icon
-* Material Theme
-* BracketHighlighter
-* rspec-snippets
+- Package Control
+- SidebarEnhancements
+- RuboCop
+- 10% Too Dull for My Tastes Color Scheme
+- A File Icon
+- Material Theme
+- BracketHighlighter
+- rspec-snippets
+- Side Bar
+
+### VSCode extensions
+
+- Auto Close Tag
+- Bracket Pair Colorizer
+- Debugger for Chrome
+- Docker
+- DotENV
+- Editor Config for VS Code
+- ES7 React/Redux/GraphQL/React-Native snippets
+- ESLint
+- Git History
+- GitLens
+- HTML Snippets
+- indent-rainbow
+- JavaScript (ES6) code snippets
+- Jest snippets
+- Markdown Pdf
+- Material Icon Theme
+- npm
+- npm Intellisense
+- Path Intellisense
+- Prettier
+- Sublime Text Keymap and Settings Importer
+- WakaTime
 
 ### To find Home folder & save it to favourites
 
@@ -80,4 +107,4 @@ Go > Home. Cmd ^ to go up one folder & drag & drop into favourites sidebar
 
 ### To save screenshots in a folder
 
-``defaults write com.apple.screencapture location drag_and_drop_folder_here``
+`defaults write com.apple.screencapture location drag_and_drop_folder_here`
