@@ -17,7 +17,7 @@ ZSH_THEME=bullet-train
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
-# Uncomment the following line to change how often to auto-update (in days).
+# Uncomment the following line to change how often to auto-updagitte (in days).
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
@@ -49,7 +49,7 @@ ZSH_THEME=bullet-train
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew osx caniuse github hub)
+plugins=(git brew osx github zsh-syntax-highlighting)
 
 # User configuration
 
@@ -90,6 +90,7 @@ source $ZSH/oh-my-zsh.sh
  alias be="bundle exec"
  alias start="bundle exec rackup -o secure2.dev.zopa.local -p 8080"
  alias gfu="git fetch upstream master"
+ alias grh="git reset --hard upstream/master"
  alias gcmsg="git commit -m"
 
  
@@ -152,6 +153,6 @@ export BUNDLER_EDITOR=“vim”
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

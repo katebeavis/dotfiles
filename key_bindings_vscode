@@ -1,0 +1,13 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "cmd+y",
+    "command": "redo",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+shift+i",
+    "command": "workbench.action.files.copyPathOfActiveFile",
+    "when": "editorTextFocus"
+  }
+]

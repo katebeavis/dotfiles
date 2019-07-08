@@ -24,6 +24,8 @@ https://www.moncefbelyamani.com/how-to-install-postgresql-on-a-mac-with-homebrew
 
 `\q`
 
+if you have no db available `createdb` to create a db under your username.
+
 ### To associate your computer with your Github account
 
 `git config --global user.email "email@example.com"`
