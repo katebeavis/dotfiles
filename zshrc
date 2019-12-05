@@ -92,6 +92,8 @@ source $ZSH/oh-my-zsh.sh
  alias gfu="git fetch upstream master"
  alias grh="git reset --hard upstream/master"
  alias gcmsg="git commit -m"
+ alias gs="git stash"
+ alias gsa="git stash apply"
 
  
 
@@ -147,6 +149,31 @@ BULLETTRAIN_PROMPT_CHAR=→
 . `brew --prefix`/etc/profile.d/z.sh
 
 export BUNDLER_EDITOR=“vim”
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
+k8s_config=$HOME/workspace/kubernetes-configs
+export KUBECONFIG=$KUBECONFIG:$k8s_config/kubeconfig/sand1.kubeconfig:$k8s_config/kubeconfig/uat1.kubeconfig:$k8s_config/kubeconfig/prod1.kubeconfig
+
+## https://confluence.globalservices.aws.ad.zopa.com/pages/viewpage.action?pageId=3312183
+## https://confluence.globalservices.aws.ad.zopa.com/display/ZRE/Kubernetes+Configuration+Generator
+function k-generate-context {
+  k8s_cluster=staging
+  if [ ! -z "$1" ]; then
+    k8s_cluster=$1
+  fi
+  cd $k8s_config
+  docker run -it -v $PWD/kubeconfig:/config -e username=kate.beavis -e cluster=$k8s_cluster packages.dns.ad.zopa.com:5001/zopa-dockerauth
+  cd -
+}
+
+alias k="kubectl"
+alias kss="k config use-context uat1-admin"
+alias ksp="k config use-context prod1-read"
+
+alias all="yarn && cd client && yarn && .. && cd server && yarn && .."
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 
