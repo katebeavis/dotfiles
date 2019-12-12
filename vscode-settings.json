@@ -7,7 +7,6 @@
   "editor.formatOnPaste": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
-  "prettier.jsxSingleQuote": true,
   "editor.formatOnSave": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -18,5 +17,8 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "prettier.singleQuote": true
+  "terminal.integrated.shell.osx": "zsh",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "workbench.sideBar.location": "left"
 }
