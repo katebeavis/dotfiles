@@ -172,6 +172,7 @@ function k-generate-context {
 alias k="kubectl"
 alias kss="k config use-context uat1-admin"
 alias ksp="k config use-context prod1-read"
+alias kgp="k get pods -n"
 
 alias all="yarn && cd client && yarn && .. && cd server && yarn && .."
 
