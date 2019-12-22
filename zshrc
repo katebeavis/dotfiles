@@ -173,8 +173,11 @@ alias k="kubectl"
 alias kss="k config use-context uat1-admin"
 alias ksp="k config use-context prod1-read"
 alias kgp="k get pods -n"
+alias kdp="k delete -n"
 
 alias all="yarn && cd client && yarn && .. && cd server && yarn && .."
+alias yd="yarn dev"
+alias ya="yarn add"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 
