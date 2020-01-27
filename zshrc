@@ -94,6 +94,7 @@ source $ZSH/oh-my-zsh.sh
  alias gcmsg="git commit -m"
  alias gs="git stash"
  alias gsa="git stash apply"
+ alias fix="git diff --name-only | uniq | xargs code"
 
  
 
@@ -170,14 +171,17 @@ function k-generate-context {
 }
 
 alias k="kubectl"
-alias kss="k config use-context uat1-admin"
-alias ksp="k config use-context prod1-read"
+alias kuat="k config use-context uat1-admin"
+alias kprod="k config use-context prod1-read"
 alias kgp="k get pods -n"
 alias kdp="k delete -n"
 
 alias all="yarn && cd client && yarn && .. && cd server && yarn && .."
 alias yd="yarn dev"
 alias ya="yarn add"
+alias remove="cd client && rm -rf node_modules && rm yarn.lock && .. && cd server && rm -rf node_modules && rm yarn.lock && .. && rm -rf node_modules && rm yarn.lock"
+
+alias yt="yarn test"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 
