@@ -53,8 +53,10 @@ plugins=(git brew osx github zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH="$PATH:/Users/kate.beavis/.rvm/gems/ruby-2.2.1/bin:/Users/kate.beavis/.rvm/gems/ruby-2.2.1@global/bin:/Users/kate.beavis/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/kate.beavis/.rvm/bin"
+
 # export MANPATH="/usr/local/man:$MANPATH"
+
+export PATH="/Users/kate.beavis/.gem/ruby/2.6.0/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -236,6 +238,10 @@ alias yd="yarn dev"
 alias ya="yarn add"
 alias remove="cd client && rm -rf node_modules && rm yarn.lock && .. && cd server && rm -rf node_modules && rm yarn.lock && .. && rm -rf node_modules && rm yarn.lock"
 alias ysw="yarn && cd packages && cd client && yarn && .. && cd server && yarn && .. && .."
+alias pi="pnpm install"
+alias pd="pnpm dev"
+alias pa="pnpm add"
+
 
 alias yt="yarn test"
 
