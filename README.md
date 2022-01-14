@@ -32,6 +32,8 @@ if you have no db available `createdb` to create a db under your username.
 
 `git config --global credential.helper osxkeychain`
 
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
 **If you have 2-factor-authentication enabled:**
 
 Create a personal token (Github profile > Developer Settings > Personal Access Tokens & select repo) & use it in place of password when pushing.
