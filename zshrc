@@ -49,7 +49,7 @@ ZSH_THEME=bullet-train
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew osx github zsh-syntax-highlighting)
+plugins=(git brew macos github zsh-syntax-highlighting)
 
 # User configuration
 
@@ -157,71 +157,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
-# K8s
-#####
-
-# Create the dir that will hold the configs
-k8s_config=$HOME/workspace/kubernetes-configs
-export KUBECONFIG=$KUBECONFIG:$k8s_config/kubeconfig/sand1.kubeconfig:$k8s_config/kubeconfig/uat1.kubeconfig:$k8s_config/kubeconfig/prod1.kubeconfig
-
-## https://confluence.globalservices.aws.ad.zopa.com/pages/viewpage.action?pageId=3312183
-## https://confluence.globalservices.aws.ad.zopa.com/display/ZRE/Kubernetes+Configuration+Generator
-
-## Change username
-function k-generate-context {
-  k8s_cluster=staging
-  if [ ! -z "$1" ]; then
-    k8s_cluster=$1
-  fi
-  cd $k8s_config
-  docker run -it -v $PWD/kubeconfig:/config -e username=kate.beavis -e cluster=$k8s_cluster packages.dns.ad.zopa.com:5001/zopa-dockerauth
-  cd -
-}
-
-# EKS
-#####
-eks_home=$HOME/workspace/ekslogin
-export KUBECONFIG=$KUBECONFIG:$eks_home/kubeconfig-eks-uat.yaml:$eks_home/kubeconfig-eks-prod.yaml
-
-# I save some custom scripts in ~/.bin -- Make sure it's in your PATH or change the paths to adapt to your needs
-export PATH=$HOME/.bin:$PATH
-
-# Change paths to point to your kubectl installations
-function kcenv {
-  case $1 in
-  eks)
-    ln -sf /usr/local/bin/kubectl-1.15 /usr/local/bin/kubectl
-    ;;
-  k8s)
-    ln -sf /usr/local/Cellar/kubernetes-cli/1.8.2/bin/kubectl /usr/local/bin/kubectl
-    ;;
-  *)
-    echo "Usage: kcenv <eks|k8s>"
-  esac
-}
-
-eks_creds=$HOME/.ekslogin-tmp
-if [ -f $eks_creds ]; then
-    source $eks_creds
-fi
-
-function ekslogin {
-  k8s_cluster=uat
-  if [ ! -z "$1" ]; then
-    k8s_cluster=$1
-  fi
-
-  k8s_tribe=tribe-investors
-  if [ ! -z "$2" ]; then
-    k8s_tribe=$2
-  fi
-
-  . $eks_home/ekslogin.sh $k8s_cluster $k8s_tribe
-
-  echo "export VAULT_HTTP_TOKEN=$VAULT_HTTP_TOKEN" > $eks_creds
-  echo "export VAULT_TOKEN=$VAULT_TOKEN" >> $eks_creds
-  echo "export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >> $eks_creds
-  echo "export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> $eks_creds
+ekslogin() {
+  . ~/ekslogin.sh $1 tribe-investors
 }
 
 alias k="kubectl"
@@ -241,9 +178,16 @@ alias ysw="yarn && cd packages && cd client && yarn && .. && cd server && yarn &
 alias pi="pnpm install"
 alias pd="pnpm dev"
 alias pa="pnpm add"
+alias ea="yarn test packages/zeos-native-products/savings-easy-access"
 
 
 alias yt="yarn test"
+
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 
@@ -253,3 +197,5 @@ alias yt="yarn test"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
