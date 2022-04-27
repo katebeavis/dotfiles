@@ -38,10 +38,6 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generati
 
 Create a personal token (Github profile > Developer Settings > Personal Access Tokens & select repo) & use it in place of password when pushing.
 
-### To associate your computer with your Enterprise Github account
-
-https://help.github.com/enterprise/2.11/user/articles/connecting-to-github-with-ssh/
-
 Add Identity using Keychain
 
 `ssh-add -K ~/.ssh/id_rsa`
